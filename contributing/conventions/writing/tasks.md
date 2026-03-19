@@ -486,7 +486,7 @@ Steps that involve infrastructure or environment-dependent operations (`Docker`,
 Key rules:
 
 - **Place after the checkpoint.** The troubleshooting block follows the "You should see…" checkpoint, because students only need it when the checkpoint fails.
-- **Use a bold sentence for each symptom.** Start each entry with a bold sentence containing the symptom (what the student sees), then the fix. See [Troubleshooting sections](../writing/common.md#427-troubleshooting-sections) for the format.
+- **Use a bold sentence for each symptom.** Start each entry with a bold sentence containing the symptom (what the student sees), then the fix. See [Troubleshooting sections](../writing/common.md#427-troubleshooting) for the format.
 - **Keep it brief.** Cover only the 2–3 most common failures per block. Rare edge cases can still go to the TA.
 - **Link to wiki instead of duplicating.** When a fix involves a reusable tool operation (e.g., stopping a process, restarting a service), link to the relevant wiki section rather than re-explaining the steps inline.
 - **Only add to infrastructure steps.** Steps involving external systems or environment-dependent operations where common failures are predictable. Simple file edits or `Git` commands don't need troubleshooting blocks.
