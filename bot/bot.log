@@ -1,0 +1,9 @@
+nohup: ignoring input
+No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "/root/se-toolkit-lab-7/.venv/lib/python3.14/site-packages/telegram/ext/_application.py", line 1315, in process_update
+    await coroutine
+  File "/root/se-toolkit-lab-7/.venv/lib/python3.14/site-packages/telegram/ext/_handlers/basehandler.py", line 159, in handle_update
+    return await self.callback(update, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object can't be awaited
