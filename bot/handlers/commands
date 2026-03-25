@@ -97,3 +97,6 @@ def process_natural_query(query: str) -> str:
 
 def unknown() -> str:
     return "❓ Unknown command. Use /help to see available commands."
+
+
+EOF
