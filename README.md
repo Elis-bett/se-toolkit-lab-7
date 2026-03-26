@@ -91,3 +91,27 @@ By the end of this lab, you should be able to say:
 2. [Backend Integration](./lab/tasks/required/task-2.md) — P0: slash commands + real data
 3. [Intent-Based Natural Language Routing](./lab/tasks/required/task-3.md) — P1: LLM tool use
 4. [Containerize and Document](./lab/tasks/required/task-4.md) — P3: containerize + deploy
+
+## Deploy
+
+### Prerequisites
+
+- Docker and Docker Compose installed
+- Git repository cloned
+- Environment files configured
+
+### Environment Variables
+
+Create `.env.docker.secret` in the project root with the following variables:
+
+```bash
+# Backend
+LMS_API_KEY=your_lms_api_key_here
+POSTGRES_PASSWORD=postgres
+POSTGRES_USER=postgres
+POSTGRES_DB=lms
+
+# Bot
+BOT_TOKEN=your_telegram_bot_token_here
+LLM_API_KEY=your_qwen_api_key_here
+LLM_API_MODEL=qwen-turbo

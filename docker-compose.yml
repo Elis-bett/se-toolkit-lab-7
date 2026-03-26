@@ -88,6 +88,25 @@ services:
       - ${LMS_API_HOST_ADDRESS:?'LMS_API_HOST_ADDRESS is required'}:${LMS_API_HOST_PORT:?'LMS_API_HOST_PORT is required'}:${CADDY_CONTAINER_PORT}
     volumes:
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
+  bot:
+    build:
+      context: .
+      dockerfile: bot/Dockerfile
+    container_name: se-toolkit-lab-7-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - LMS_API_BASE_URL=http://backend:8000
+      - LMS_API_KEY=${LMS_API_KEY}
+      - LLM_API_KEY=${LLM_API_KEY}
+      - LLM_API_BASE_URL=http://host.docker.internal:42005
+      - LLM_API_MODEL=${LLM_API_MODEL:-qwen-turbo}
+    depends_on:
+      - backend
+    networks:
+      - se-toolkit-network
+    env_file:
+      - .env.docker.secret
 
 volumes:
   postgres_data:
